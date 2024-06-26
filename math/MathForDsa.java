@@ -7,7 +7,10 @@
        //reverse(2478);
        //exponential(3, 2);
        //countDigits(6879);
-       countDigitsByLog(0);
+       //countDigitsByLog(0);
+       //armStrongnumber(123);
+       //pallindrome(55);
+       AllDivisor(36);
        
     };
     
@@ -94,5 +97,53 @@
       System.out.println(res);
     }
 
+    public static void armStrongnumber (int num) {
+        int dub = num;
+        int res =0;
+        while (num>0) {
+         int digit=  num%10;
+         res= res + (int)Math.pow(digit,3);
+         num = num/10;
+        }
+        if (dub == res) {
+            System.out.println(res + " This Number is ArmStrongNumber");
+        }else{
+            System.out.println(res + " This Number is not ArmStrongNumber");
+        }
+        
+    }
+
+
+    static void pallindrome(int num){
+        int copy = num;
+        int res = 0;
+        while (num > 0) {
+            int digit = num % 10;
+            res = res * 10 + digit;
+            num /= 10;
+        }
+        if (copy == res) {
+            System.out.println(res + " This number is Pellindrome");
+        }else{
+            System.out.println(res + " This number is not Pellindrome");
+        }
+
+    }
+
+
+    public static void AllDivisor(int num) {
+        int counter = 1;
+        while (counter <= (int)Math.sqrt(num)) {
+            if (num % counter == 0) {
+                System.out.println(counter + " is a divisor of " + num);
+                if (num / counter != counter) {
+                System.out.println(num/counter + " is a divisor of " + num);
+                }
+                
+        }
+        counter++;
+        System.out.println(counter);
+    }
+}
 
 }
