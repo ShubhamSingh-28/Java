@@ -30,6 +30,8 @@ public class ArrayForDsa {
          rollNo[0] = 54;
         
          Scanner sc = new Scanner(System.in);
-
+        String b= sc.nextLine();
+        System.out.println(b);
+        
     }
 }
