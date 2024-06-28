@@ -55,7 +55,7 @@ Scanner sc = new Scanner(System.in);
             m2darray[i][j] = element;
           }
         }
-
+        sc.close();
         print2d(m2darray);
         
     }
