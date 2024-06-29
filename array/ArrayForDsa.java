@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class ArrayForDsa {
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ public class ArrayForDsa {
         System.out.println("After Deletion");
         print(arr);
 */
-Scanner sc = new Scanner(System.in);
+       /*Scanner sc = new Scanner(System.in);
         int m2darray[][] = new int[3][3];
 
         for (int i = 0; i < m2darray.length; i++) {
@@ -56,7 +56,16 @@ Scanner sc = new Scanner(System.in);
           }
         }
         sc.close();
-        print2d(m2darray);
+        */
+        int marks[]= {8,10,34,49,5,4};
+
+        SearchElement(marks, 5);
+        
+       // print2d(m2darray);
+
+       // deletionIn2d(m2darray, 0, 2);
+       // System.out.println("After insertion");
+       // print2d(m2darray);
         
     }
 
@@ -119,5 +128,26 @@ Scanner sc = new Scanner(System.in);
         print(is);
       }
     }
+
+    public static void insrtionIn2d (int arr[][], int pos1, int pos2, int element){
+      insert(arr[pos1], pos2, element);
+  }
+
+
+  public static void deletionIn2d (int arr[][], int pos1, int pos2){
+    deletion(arr[pos1], pos2);
+  }
+
+
+  public static void  SearchElement(int arr[] , int element){
+
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == element) {
+        System.out.println("element exist on "+ i + " index");
+        break;
+      }
+    }
+  }
+
 
 }
